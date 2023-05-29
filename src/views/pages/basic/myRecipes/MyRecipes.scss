@@ -1,0 +1,8 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+
+.my-recipes {  
+  h1 {
+    @include titleH1();
+  }
+}

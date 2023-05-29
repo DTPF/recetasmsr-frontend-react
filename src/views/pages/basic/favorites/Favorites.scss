@@ -1,0 +1,8 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+
+.favorites {  
+  h1 {
+    @include titleH1();
+  }
+}

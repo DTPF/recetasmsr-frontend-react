@@ -1,0 +1,12 @@
+@import '../../../../../scss/variables';
+
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-primary;
+    background-color: $bg-primary;
+    font-size: 1.5rem;
+    min-height: 90px;
+    font-weight: bold;
+}

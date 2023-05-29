@@ -1,0 +1,125 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/animations';
+@import '../../../../scss/mixins';
+
+.recipes-component {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &__order-by {
+        width: 93%;
+        text-align: right;
+        margin-top: -60px;
+
+        &--btn {
+            @include buttonPrimary();
+            width: 60px;
+            height: 40px;
+            padding: 6px 4px;           
+            font-size: 1.2rem;            
+        }
+    }
+
+    &-div {
+        // Sizes for intersection observer
+        width: 350px;
+        height: 400px;
+
+        &__container {
+            display: flex;
+            margin-block: 2.5rem;
+            @include fadeIn();
+
+            &--card {
+                width: 100vw !important;
+                display: flex;
+                flex-direction: column;
+                width: clamp(20rem, calc(20rem + 2vw), 22rem);
+                overflow: hidden;
+                margin: 0 10px;
+                border-radius: 1em;
+                background: #ECE9E6;
+                background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+                box-shadow: inset -1px 3px 8px 5px #00000017, 2px 5px 16px 0px #00000017, 5px 5px 15px 5px #00000017;
+                transition: 0.3s;
+
+                &__header {
+                    &__cookingTime {
+                        position: absolute;
+                        color: #fff;
+                        font-size: .7rem;
+                        margin: 8px;
+                        padding: 4px 6px;
+                        border-radius: 10px;
+                        box-shadow: inset -1px 3px 8px 5px #00000017, 2px 5px 16px 0px #00000017, 5px 5px 15px 5px #00000017;
+                        border: 1px solid $bg-primary;
+                        background-color: $bg-dark-primary;
+                    }
+
+                    &__image {
+                        max-width: 100%;
+                        display: block;
+                        object-fit: cover;
+                    }
+                }
+
+                &__body {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1rem;
+                    gap: .5rem;
+                    background-color: #f7feff;
+
+                    h4 {
+                        color: $color-primary-dark;
+                        font-size: 1.5rem;
+                        text-transform: capitalize;
+                    }
+                }
+
+                &__footer {
+                    display: flex;
+                    padding: 1rem;
+                    padding-bottom: 5px;
+                    margin-top: auto;
+                    background-color: #f7feff;
+
+                    text-align: right;
+
+                    &--user {
+                        display: flex;
+                        gap: .5rem;
+                        width: 100%;
+                        font-weight: bold;
+
+                        &__name {
+                            width: 50%;
+                            text-align: left;
+                            color: $color-primary-dark;
+                            font-size: .7rem;
+                        }
+
+                        &__createdAt {
+                            width: 50%;
+                            color: $color-primary;
+                            font-size: .8rem;
+                        }
+                    }
+                }
+
+                &:hover {
+                    box-shadow: inset -1px 3px 8px 5px #00000023, 2px 5px 16px 0px #00000023, 5px 5px 15px 5px #00000023;
+                    transform: scale(1.02);
+                }
+
+                @media (min-width: $media-breakpoint-up-xl) {
+                    margin: 0 25px;
+                }
+            }
+        }
+    }
+}

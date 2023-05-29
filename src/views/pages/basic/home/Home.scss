@@ -1,0 +1,8 @@
+@import '../../../../scss/variables';
+@import '../../../../scss//mixins';
+
+.web-home {
+  h1 {
+    @include titleH1();
+  }
+}

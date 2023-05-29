@@ -1,0 +1,22 @@
+@import '../scss/animations';
+
+@mixin titleH1() {
+  color: $color-primary;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  @include fadeIn()
+}
+
+@mixin buttonPrimary() {
+  background-color: $bg-dark-primary;
+  color: #fff;
+  border: 1px solid $color-primary;
+  border-radius: 10px;
+  box-shadow: inset -1px 3px 8px 5px #00000017, 2px 5px 16px 0px #00000017, 5px 5px 15px 5px #00000017;
+  @include fadeIn();
+
+  &:hover {
+    box-shadow: inset -1px 3px 8px 5px #00000023, 2px 5px 16px 0px #00000023, 5px 5px 15px 5px #00000023;
+  }
+}

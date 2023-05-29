@@ -1,0 +1,19 @@
+@import '../../../../../scss/variables';
+@import '../../../../../scss/animations';
+
+.login-icon {
+    position: absolute;
+    right: 370px;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    padding: 2px;
+    margin-top: 3px;
+    @include fadeIn();
+
+    @media (max-width: $media-breakpoint-up-md) {
+        display: none;
+    }
+}

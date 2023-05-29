@@ -1,0 +1,10 @@
+@import '../../../../../scss/variables';
+@import '../../../../../scss/animations';
+
+.search {
+  @include fadeIn();
+
+  @media (max-width: $media-breakpoint-up-md) {
+    display: none;
+  }
+}
